@@ -1,0 +1,202 @@
+@use "../colors.scss" as c;
+.entry-section {
+  &-founding-date {
+    line-height: 1;
+    & p:first-child {
+      font-size: 16px;
+    }
+    & p:last-child {
+      font-size: 108px;
+      @media all and (min-width: 64em) {
+        font-size: 40px;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &-advantage-list {
+    display: grid;
+    gap: 16px;
+    font-size: 14px;
+    grid-template-columns: repeat(2, minmax(min(152px, 100%), 1fr));
+    margin-top: 24px;
+    $background-shape: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%, 0% 30%);
+
+    &_item {
+      display: flex;
+
+      flex-direction: column;
+      justify-content: end;
+      padding: 0px 6px 8px 6px;
+      clip-path: $background-shape;
+      width: 100%;
+      height: 100%;
+      background: c.$color-neutral-900;
+
+      &-wrapper {
+        position: relative;
+        height: 104px;
+      }
+
+      &--background {
+        clip-path: $background-shape;
+        height: calc(100% + 4px);
+        width: calc(100% + 4px);
+        transform: translate(-2px, -2px);
+        @media all and (min-width: 64em) {
+          clip-path: none;
+          background: url("/assets/icons/Fact1440.svg") no-repeat;
+
+          background-size: contain;
+          transform: translateY(8px);
+        }
+      }
+      @media all and (min-width: 64em) {
+        background: inherit;
+        padding-bottom: 16px;
+      }
+    }
+    @media all and (min-width: 64em) {
+      font-size: 16px;
+      grid-template-columns: repeat(4, minmax(min(152px, 100%), 192px));
+      gap: 24px;
+    }
+  }
+
+  &--main {
+    background: c.$color-main;
+
+    color: c.$color-neutral-900;
+
+    padding-top: 16px;
+    padding-bottom: 40px;
+    margin-bottom: 32px;
+
+    & .container {
+      height: 100%;
+      position: relative;
+    }
+
+    &__header,
+    &__description {
+      position: relative;
+      z-index: 999;
+    }
+
+    &__header,
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__header {
+      gap: 25px;
+      margin-bottom: 20px;
+      align-items: start;
+      &-logo {
+        max-width: 149px;
+        height: 48px;
+        @media all and (min-width: 64em) {
+          height: 64px;
+          max-width: 200px;
+        }
+      }
+      &-schedule {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        max-width: 149px;
+        @media all and (min-width: 64em) {
+          flex-direction: row;
+          align-items: end;
+          column-gap: 24px;
+          max-width: 600px;
+        }
+      }
+      &-button {
+        display: none;
+        @media all and (min-width: 40em) {
+          align-self: center;
+          display: block;
+        }
+      }
+      @media all and (min-width: 64em) {
+        margin-bottom: 96px;
+      }
+    }
+    &__description {
+      & article {
+        margin-bottom: 12px;
+      }
+      &-location-data {
+        display: block;
+        border: 2px solid c.$color-accent;
+        background-color: rgba(22, 25, 31, 1);
+        padding: 18px;
+        max-width: 320px;
+        font-size: 16px;
+
+        position: relative;
+        z-index: 999;
+      }
+      & .main-factories {
+        font-size: 20px;
+        @media only screen and (min-width: 48em) {
+          font-size: 32px;
+          margin-top: 12px;
+        }
+      }
+
+      @media only screen and (min-width: 64em) {
+        flex-direction: column-reverse !important;
+      }
+    }
+
+    &-decor-object {
+      transform: translate(35px, -10px);
+      @media only screen and (min-width: 64em) {
+        position: absolute;
+        z-index: 0;
+        right: 8vw;
+        top: 0;
+      }
+      @media only screen and (min-width: 100em) {
+        right: 6vw;
+      }
+    }
+    &__footer {
+      display: none;
+      @media all and (min-width: 40em) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        z-index: 22;
+      }
+    }
+    &-mobile-button {
+      display: block;
+      margin: 0 auto;
+      @media all and (min-width: 40em) {
+        display: none;
+      }
+    }
+    @media all and (min-width: 64em) {
+      height: 100vh;
+      max-height: 720px;
+      padding-bottom: 0px;
+    }
+  }
+  &--mobile {
+    @media all and (min-width: 40em) {
+      display: none;
+    }
+  }
+  & .text-underline {
+    font-size: 20px;
+    @media all and (min-width: 64em) {
+      font-size: 40px;
+    }
+  }
+}

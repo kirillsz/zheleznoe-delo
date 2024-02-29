@@ -1,0 +1,62 @@
+@use "./colors" as c;
+@font-face {
+  font-family: "Brutal";
+  src: url("/fonts/BrutalType-Bold.woff2") format("woff2"),
+    url("/fonts/BrutalType-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brutal";
+  src: url("/fonts/BrutalType-Medium.woff2") format("woff2"),
+    url("/fonts/BrutalType-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brutal";
+  src: url("/fonts/BrutalType.woff2") format("woff2"),
+    url("/fonts/BrutalType.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Size classes */
+
+.description-text-xs {
+  font-size: 14px;
+  @media all and (min-width: 64em) {
+    font-size: 16px;
+  }
+}
+.text-s {
+  font-size: 18px;
+  @media all and (min-width: 40em) {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+
+/* Weight classes */
+
+.fw-700 {
+  font-weight: 700;
+}
+.fw-500 {
+  font-weight: 500;
+}
+
+/* Color classes*/
+.fc {
+  &-accent {
+    color: c.$color-accent;
+  }
+  &-main {
+    color: c.$color-main;
+  }
+  &-neutral-900 {
+    color: c.$color-neutral-900;
+  }
+}

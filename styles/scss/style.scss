@@ -1,0 +1,154 @@
+@use "./reset";
+@use "./colors" as c;
+@use "./sections/entry";
+@use "./sections/article";
+@use "./sections/catalog";
+@use "./sections/brands";
+@use "./sections/contact";
+@use "./sections/footer";
+@use "./typography";
+@use "./utils/popUp";
+@use "./utils/form";
+@use "./utils/buttonClose";
+
+:root {
+  font-size: 18px;
+  @media only screen and (min-width: 64em) {
+    font-size: 20px;
+  }
+}
+body {
+  font-family: "Brutal", sans-serif;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.container {
+  --max-width: 1325px;
+  --padding: 20px;
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+  @media only screen and (min-width: 64em) {
+    --padding: 32px;
+  }
+}
+
+.main-heading {
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  @media only screen and (min-width: 64em) {
+    font-size: 48px;
+  }
+}
+.button {
+  $button-shape: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+  background-color: inherit;
+  width: 100%;
+  max-width: 320px;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 16px;
+  clip-path: $button-shape;
+
+  &-background {
+    height: calc(100% + 3px);
+    width: calc(100% + 2px);
+    transform: translate(-1px, -1px);
+    clip-path: $button-shape;
+    @media only screen and (min-width: 64em) {
+      height: calc(100% + 2px);
+    }
+  }
+  &-fs-changing {
+    @media only screen and (min-width: 64em) {
+      font-size: 24px;
+    }
+  }
+}
+.arrow {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-24px, 12px);
+
+  & > * {
+    background: c.$color-main;
+    @media only screen and (min-width: 64em) {
+      background: c.$color-accent;
+    }
+  }
+  &-body {
+    display: inline-block;
+    position: absolute;
+    width: 2px;
+    height: 19px;
+    transform: translate(1px, -2px);
+    rotate: 45deg;
+  }
+  &-tip {
+    &--left,
+    &--right {
+      display: inline-block;
+      position: absolute;
+      width: 12px;
+      height: 2px;
+      border-radius: 20%;
+    }
+    &--right {
+      rotate: (-90deg);
+      transform: translate(-5px, 5px);
+    }
+  }
+  @media only screen and (min-width: 64em) {
+    transform: translate(-24px, 24px);
+  }
+}
+
+/* Utils */
+
+.bg {
+  &-accent {
+    background-color: c.$color-accent;
+  }
+  &-main {
+    background-color: c.$color-main;
+  }
+  &-neutral-400 {
+    background-color: c.$color-neutral-400;
+  }
+  &-neutral-900 {
+    background-color: c.$color-neutral-900;
+  }
+}
+
+.text-underline {
+  text-decoration: 2px underline;
+  text-underline-offset: 4px;
+  &[data-type="policy"] {
+    text-decoration: 1px underline;
+  }
+}
+
+.section-margin {
+  margin-bottom: 64px;
+  @media all and (min-width: 64em) {
+    margin-bottom: 96px;
+  }
+}
+.bottom-angle-cutoff-shape {
+  max-width: fit-content;
+  padding: 0.35rem 1.65rem 0.35rem 0.75rem;
+  clip-path: polygon(50% 0%, 100% 0, 95% 100%, 0 100%, 0 0);
+}
+
+.figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  &-wrapper {
+    height: 100%;
+    position: relative;
+  }
+}
