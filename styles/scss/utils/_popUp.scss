@@ -29,6 +29,7 @@
     }
   }
   & .button-close {
+    cursor: pointer;
     position: absolute;
     top: 16px;
     right: 16px;
@@ -54,5 +55,83 @@
   @media all and (min-width: 64em) {
     font-size: 18px;
     padding: 24px;
+  }
+}
+.show-popUp {
+  cursor: pointer;
+}
+.members-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 24px;
+  @media all and (min-width: 64em) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 96px;
+  }
+  &__item {
+    text-align: left;
+    @media all and (min-width: 64em) {
+      display: flex;
+      column-gap: 16px;
+      align-items: center;
+    }
+    & > div {
+      @media all and (min-width: 64em) {
+        transform: translateY(-6px);
+      }
+    }
+    &--header {
+      font-size: 18px;
+      @media all and (min-width: 64em) {
+        font-size: 24px;
+      }
+    }
+  }
+}
+#members-modal {
+  &__header {
+    text-align: left;
+    max-width: 274px;
+    font-size: 20px;
+    margin-bottom: 34px;
+    @media all and (min-width: 64em) {
+      font-size: 32px;
+      max-width: none;
+      text-align: center;
+    }
+  }
+
+  & .pop-up {
+    width: 100%;
+    display: block;
+    height: 100%;
+
+    overflow-y: scroll;
+
+    @media all and (min-width: 100em) {
+      display: flex;
+      align-items: center;
+      width: 1312px;
+      height: fit-content;
+    }
+    @media all and (min-width: 64em) and (min-height: 680px) {
+      overflow: hidden;
+    }
+  }
+  &.pop-up-wrapper {
+    @media all and (min-width: 64em) {
+      padding: 16px 32px;
+    }
+  }
+  & #owner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    @media all and (min-width: 64em) {
+      gap: 6px;
+    }
+    & .bg-accent {
+      padding: 0 0.2rem 0.1rem 0.2rem;
+    }
   }
 }

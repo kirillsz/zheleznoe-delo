@@ -2,14 +2,18 @@
 @use "./colors" as c;
 @use "./sections/entry";
 @use "./sections/article";
+@use "./sections/quiz";
 @use "./sections/catalog";
 @use "./sections/brands";
 @use "./sections/contact";
 @use "./sections/footer";
+@use "./sections/slider";
+
 @use "./typography";
 @use "./utils/popUp";
 @use "./utils/form";
 @use "./utils/buttonClose";
+@use "../../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
 
 :root {
   font-size: 18px;
@@ -21,6 +25,7 @@ body {
   font-family: "Brutal", sans-serif;
   font-weight: 400;
   line-height: 1.25;
+  overflow-x: hidden;
 }
 .container {
   --max-width: 1325px;
@@ -42,6 +47,7 @@ body {
   }
 }
 .button {
+  cursor: pointer;
   $button-shape: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
   background-color: inherit;
   width: 100%;
@@ -64,6 +70,12 @@ body {
     @media only screen and (min-width: 64em) {
       font-size: 24px;
     }
+  }
+  &:disabled.bg-accent {
+    background-color: rgba(230, 231, 232, 1);
+  }
+  &:not(:disabled):hover.bg-accent {
+    background-color: c.$color-accent-hovered;
   }
 }
 .arrow {
@@ -151,4 +163,11 @@ body {
     height: 100%;
     position: relative;
   }
+}
+img {
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
 }

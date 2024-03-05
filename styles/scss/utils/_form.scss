@@ -1,12 +1,15 @@
+@use "../colors" as v;
 .form {
   &__input {
     height: 48px;
     padding: 18px 12px;
     border-radius: 2px;
-    border: 1px solid rgba(68, 71, 83, 1);
-
-    &:valid {
-      border-color: green;
+    border: none;
+    outline: 1px solid rgba(68, 71, 83, 1);
+    &:disabled {
+      outline: 1px solid rgba(152, 160, 171, 1);
+      background-color: rgba(152, 160, 171, 0.25);
+      color: rgba(152, 160, 171, 1);
     }
   }
   &_label-group {
@@ -15,5 +18,39 @@
     flex-direction: column;
     gap: 2px;
     margin-bottom: 16px;
+  }
+  // Radio input styled like button
+  &__radio-btn {
+    --border: 1px solid #000;
+    --border-radius: 2px;
+    --padding: 0.85em 1.2em;
+    --color-initial: #fff;
+    --color-selected: #{v.$color-accent};
+    --color-hover: rgba(66, 70, 83, 1);
+    display: inline-block;
+
+    & input[type="radio"] {
+      display: none;
+      /* OnSelect */
+      &:checked + label {
+        background-color: var(--color-selected);
+        outline: none;
+      }
+    }
+    & label {
+      display: inline-block;
+      cursor: pointer;
+      background-color: var(--color-initial);
+      padding: var(--padding);
+
+      outline: var(--border);
+      border-radius: var(--border-radius);
+      user-select: none;
+      /* OnHover */
+      &:hover {
+        color: var(--color-hover);
+        border-color: var(--color-hover);
+      }
+    }
   }
 }

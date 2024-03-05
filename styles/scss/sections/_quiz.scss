@@ -1,0 +1,149 @@
+@use "../colors" as v;
+
+.quiz-section {
+  position: relative;
+  padding: 30px 0;
+  background-color: rgb(66, 70, 83);
+  @media only screen and (min-width: 64em) {
+    padding-top: 48px;
+    padding-bottom: 204px;
+  }
+  &__about {
+    margin-bottom: 16px;
+    font-size: 24px;
+    @media only screen and (min-width: 64em) {
+      font-size: 40px;
+    }
+  }
+  &__interactive {
+    height: 478px;
+    position: relative;
+    padding: 24px 16px;
+    background-color: v.$color-neutral-900;
+    @media only screen and (min-width: 64em) {
+      width: 530px;
+      height: 452px;
+      transform: translateY(80px);
+      padding: 32px 24px;
+    }
+    &_progress-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(230, 231, 232, 1);
+      height: 4px;
+      width: 100%;
+      &--completed {
+        height: 100%;
+        width: 25%;
+        background-color: v.$color-accent;
+      }
+    }
+  }
+  &__bg-decor-item {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: v.$color-accent;
+    width: 50vw;
+    height: 55%;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    @media only screen and (min-width: 64em) {
+      height: 100%;
+      clip-path: polygon(90% 0, 100% 0, 100% 100%, 35% 100%);
+    }
+  }
+  & .container {
+    position: relative;
+    z-index: 2;
+    @media only screen and (min-width: 64em) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__question {
+    font-size: 18px;
+    @media only screen and (min-width: 64em) {
+      font-size: 24px;
+    }
+  }
+  &__radio-group {
+    display: grid;
+    text-align: center;
+    --gap: 9px;
+    gap: var(--gap);
+
+    font-size: 16px;
+    & label {
+      display: block !important;
+    }
+
+    &.columned {
+      grid-template-columns: 1fr 1fr;
+      font-size: 14px;
+      margin-bottom: var(--gap);
+      @media only screen and (min-width: 64em) {
+        margin-bottom: 16px;
+        font-size: 16px;
+      }
+    }
+    @media only screen and (min-width: 64em) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  & .form__input {
+    width: 100%;
+  }
+  .current-step {
+    height: 100%;
+    max-height: 478px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 8px;
+    padding-bottom: 24px;
+    &__controlls {
+      display: flex;
+
+      gap: 16px;
+      & button:not(:only-child),
+      .button-background,
+      input {
+        clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+      }
+    }
+    &[data-step-content="4"] {
+      & form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+    }
+  }
+  & .figure-wrapper {
+    width: 100%;
+    height: 48px;
+    @media only screen and (min-width: 64em) {
+      height: 62px;
+    }
+  }
+  &__decor-img {
+    display: none;
+    @media only screen and (min-width: 64em) {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      bottom: 40px;
+      left: 33px;
+    }
+  }
+  & button,
+  input[type="submit"] {
+    @media only screen and (min-width: 64em) {
+      font-size: 24px;
+    }
+  }
+}

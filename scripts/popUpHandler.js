@@ -1,3 +1,4 @@
+import { checkForParent } from "./utils";
 const popUpWrapper = document.querySelector(".pop-up-wrapper");
 const inputActionType = popUpWrapper.querySelector("#input_action-type");
 const popUpShowElementsArray = document.querySelectorAll(".show-popUp");
@@ -6,17 +7,12 @@ const catalogItems = document.querySelectorAll(".catalog-item");
 
 const actionArray = ["Купить", "Обмен", "Ремонт"];
 
-function checkForParent(child) {
-  const arr = [...catalogItems];
-  return arr.find((el) => el.contains(child));
-}
-
 function setFormAction(e) {
   let action = e.dataset.action;
   inputActionType.setAttribute(
     "value",
     actionArray.includes(action)
-      ? `${action} ${checkForParent(e).dataset.item}`
+      ? `${action} ${checkForParent(e, catalogItems).dataset.item}`
       : action
   );
 }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>Железное дело</title>
+    <title>КРМЗ</title>
   </head>
   <body>
     <section class="entry-section section-margin" id="section-entry">
@@ -50,11 +50,14 @@
                 и гидромеханических <br />
                 трансмиссий
               </h1>
-              <p class="main-factories">«Кировец», «ХТЗ», «Амкодор»</p>
+              <p class="main-factories fc-accent">
+                «Кировец», «ХТЗ», «Амкодор»
+              </p>
             </article>
             <span
               class="entry-section--main__description-location-data fc-neutral-900 fw-500"
-              >Работаем со всей Россией</span
+              style="text-align: center"
+              >Работаем по всей России</span
             >
           </div>
           <div class="entry-section--main__footer">
@@ -222,7 +225,7 @@
               src="./assets/img/Repair.webp"
               alt="Рабочий контролирует процесс перемещения КПП"
             />
-            <figcaption>
+            <figcaption style="margin-top: 16px">
               <h3
                 class="article-section--margin-m fw-700"
                 style="font-size: 24px"
@@ -235,6 +238,375 @@
               </p>
             </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section class="quiz-section section-margin">
+        <img
+          class="quiz-section__decor-img"
+          src="./assets/img/Scheme.webp"
+          alt="Схема-рисунок устройства КПП"
+        />
+        <div class="quiz-section__bg-decor-item"></div>
+        <div class="container">
+          <div class="quiz-section__about">
+            <h2 class="fc-neutral-900 fw-700">
+              Укажите параметры вашей <br />
+              КПП и получите цену ремонта
+            </h2>
+          </div>
+          <div class="quiz-section__interactive">
+            <div class="quiz-section__interactive_progress-bar">
+              <div
+                class="quiz-section__interactive_progress-bar--completed"
+              ></div>
+            </div>
+            <!-- #TODO: 1. Добавить кнопку "назад" 2. Cверстать поля скрытой формы   -->
+            <div
+              class="fc-neutral-400"
+              style="font-size: 14px; position: absolute; top: 12px"
+            >
+              Шаг <span id="current-step-count">1</span> из 4
+            </div>
+            <div class="current-step" data-step-content="1">
+              <div class="current-step__container">
+                <p
+                  class="quiz-section__question fw-700"
+                  style="margin-bottom: 16px"
+                >
+                  Какой у вас трактор (тракторы)?
+                </p>
+                <div class="quiz-section__radio-group columned">
+                  <div class="form__radio-btn">
+                    <input
+                      id="tractor-type-1"
+                      type="radio"
+                      name="tractor-type"
+                      value="К—700(А)"
+                    />
+                    <label for="tractor-type-1"> К—700(А)</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="tractor-type-2"
+                      type="radio"
+                      name="tractor-type"
+                      value="К—701"
+                    />
+                    <label for="tractor-type-2"> К—701</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="tractor-type-3"
+                      type="radio"
+                      name="tractor-type"
+                      value="К—702 УДМ
+                    "
+                    />
+                    <label for="tractor-type-3"> К—702 УДМ </label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="tractor-type-4"
+                      type="radio"
+                      name="tractor-type"
+                      value="К—703
+                    "
+                    />
+                    <label for="tractor-type-4"> К—703</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="tractor-type-5"
+                      type="radio"
+                      name="tractor-type"
+                      value="К—744
+                    "
+                    />
+                    <label for="tractor-type-5"> К—744</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="tractor-type-6"
+                      type="radio"
+                      name="tractor-type"
+                      value="ХТЗ Т—150(К)
+                    "
+                    />
+                    <label for="tractor-type-6">ХТЗ Т—150(К)</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="tractor-type-7"
+                      type="radio"
+                      name="tractor-type"
+                      value="ГМП «Амкодор»
+                    "
+                    />
+                    <label for="tractor-type-7">ГМП «Амкодор»</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="tractor-type-8"
+                      type="radio"
+                      name="tractor-type"
+                      value="L—34, L—35
+                    "
+                    />
+                    <label for="tractor-type-8">L—34, L—35</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="tractor-type-9"
+                      type="radio"
+                      name="tractor-type"
+                      value="Т—130/170
+                    "
+                    />
+                    <label for="tractor-type-9">Т—130/170</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="tractor-user-choice"
+                      type="radio"
+                      name="tractor-type"
+                      value="Свой вариант
+                    "
+                    />
+                    <label for="tractor-user-choice">Свой вариант</label>
+                  </div>
+                </div>
+                <input
+                  class="form__input"
+                  type="text"
+                  name=""
+                  id="tractor-user-choice__input"
+                  placeholder="Введите свой вариант"
+                  disabled
+                />
+              </div>
+              <div class="current-step__controlls">
+                <button
+                  class="button bg-accent"
+                  type="button"
+                  style="max-width: 485px"
+                  data-direction="next"
+                  disabled
+                >
+                  Далее
+                </button>
+              </div>
+            </div>
+            <div
+              class="current-step"
+              data-step-content="2"
+              style="display: none"
+            >
+              <div class="current-step__container">
+                <p
+                  class="quiz-section__question fw-700"
+                  style="margin-bottom: 16px"
+                >
+                  Какая услуга вас интересует?
+                </p>
+                <div class="quiz-section__radio-group">
+                  <div class="form__radio-btn">
+                    <input
+                      id="service-type-1"
+                      type="radio"
+                      name="service-type"
+                      value="Покупка"
+                    />
+                    <label for="service-type-1">Покупка</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="service-type-2"
+                      type="radio"
+                      name="service-type"
+                      value="Ремонт"
+                    />
+                    <label for="service-type-2">Ремонт</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="service-type-3"
+                      type="radio"
+                      name="service-type"
+                      value="Обмен"
+                    />
+                    <label for="service-type-3">Обмен</label>
+                  </div>
+                </div>
+                <p style="margin-top: 16px; line-height: 1.5">
+                  В случае обмена, мы предоставляем готовую КПП после
+                  капитального ремонта, взамен вашей, вышедшей из строя.
+                </p>
+              </div>
+              <div class="current-step__controlls">
+                <div class="figure-wrapper">
+                  <div class="button-background bg-main"></div>
+                  <button
+                    class="button figure bg-neutral-900"
+                    data-direction="prev"
+                    style="max-width: 485px"
+                  >
+                    Назад
+                  </button>
+                </div>
+                <button
+                  class="button bg-accent"
+                  type="button"
+                  style="max-width: 485px"
+                  data-direction="next"
+                  disabled
+                >
+                  Далее
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="current-step"
+              data-step-content="3"
+              style="display: none"
+            >
+              <div class="current-step__container">
+                <p
+                  class="quiz-section__question fw-700"
+                  style="margin-bottom: 16px"
+                >
+                  Как срочно Вам нужна КПП?
+                </p>
+                <div class="quiz-section__radio-group">
+                  <div class="form__radio-btn">
+                    <input
+                      id="date-1"
+                      type="radio"
+                      name="date"
+                      value="Очень срочно"
+                    />
+                    <label for="date-1">Очень срочно</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="date-2"
+                      type="radio"
+                      name="date"
+                      value="3-7 дней"
+                    />
+                    <label for="date-2">3-7 дней</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="date-3"
+                      type="radio"
+                      name="date"
+                      value="7-14 дней"
+                    />
+                    <label for="date-3">7-14 дней</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="date-4"
+                      type="radio"
+                      name="date"
+                      value="В течение месяца"
+                    />
+                    <label for="date-4">В течение месяца</label>
+                  </div>
+                  <div class="form__radio-btn">
+                    <input
+                      id="date-5"
+                      type="radio"
+                      name="date"
+                      value="Интересуюсь на будущее"
+                    />
+                    <label for="date-5">Интересуюсь на будущее</label>
+                  </div>
+                </div>
+              </div>
+              <div class="current-step__controlls">
+                <div class="figure-wrapper">
+                  <div class="button-background bg-main"></div>
+                  <button
+                    class="button figure bg-neutral-900"
+                    data-direction="prev"
+                    style="max-width: 485px"
+                  >
+                    Назад
+                  </button>
+                </div>
+                <button
+                  class="button bg-accent"
+                  type="button"
+                  style="max-width: 485px"
+                  data-direction="next"
+                  disabled
+                >
+                  Далее
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="current-step"
+              data-step-content="4"
+              style="display: none"
+            >
+              <p
+                class="quiz-section__question fw-700"
+                style="margin-bottom: 16px"
+              >
+                Позвоним вам и сообщим цену по вашим параметрам
+              </p>
+              <form method="POST" action="/amo/amo.php">
+                <div class="form_label-group">
+                  <input
+                    id="input_tractor-type"
+                    name="tractor-type"
+                    type="text"
+                    hidden
+                  />
+                  <input
+                    id="input_service-type"
+                    name="service-type"
+                    type="text"
+                    hidden
+                  />
+                  <input id="input_date" name="date" type="text" hidden />
+                  <label for="telephone" style="margin-bottom: 4px"
+                    >Ваш номер</label
+                  >
+                  <input
+                    class="form__input"
+                    name="telephone"
+                    type="tel"
+                    placeholder="+7 123 456 78 90"
+                    pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
+                    required
+                  />
+                </div>
+                <div class="current-step__controlls">
+                  <div class="figure-wrapper">
+                    <div class="button-background bg-main"></div>
+                    <button
+                      class="button figure bg-neutral-900"
+                      data-direction="prev"
+                      style="max-width: 485px"
+                    >
+                      Назад
+                    </button>
+                  </div>
+                  <input
+                    class="button bg-accent"
+                    type="submit"
+                    value="Отправить"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -261,9 +633,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button show-popUp figure bg-neutral-900"
-                      data-action="Купить"
+                      data-action="Обмен"
                     >
-                      Купить
+                      Обмен
                     </button>
                   </div>
                 </li>
@@ -283,9 +655,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button show-popUp figure bg-neutral-900"
-                      data-action="Обмен"
+                      data-action="Купить"
                     >
-                      Обмен
+                      Купить
                     </button>
                   </div>
                 </li>
@@ -313,9 +685,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Купить"
+                      data-action="Обмен"
                     >
-                      Купить
+                      Обмен
                     </button>
                   </div>
                 </li>
@@ -335,9 +707,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Обмен"
+                      data-action="Купить"
                     >
-                      Обмен
+                      Купить
                     </button>
                   </div>
                 </li>
@@ -362,9 +734,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Купить"
+                      data-action="Обмен"
                     >
-                      Купить
+                      Обмен
                     </button>
                   </div>
                 </li>
@@ -384,9 +756,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Обмен"
+                      data-action="Купить"
                     >
-                      Обмен
+                      Купить
                     </button>
                   </div>
                 </li>
@@ -416,9 +788,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Купить"
+                      data-action="Обмен"
                     >
-                      Купить
+                      Обмен
                     </button>
                   </div>
                 </li>
@@ -438,9 +810,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Обмен"
+                      data-action="Купить"
                     >
-                      Обмен
+                      Купить
                     </button>
                   </div>
                 </li>
@@ -465,9 +837,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Купить"
+                      data-action="Обмен"
                     >
-                      Купить
+                      Обмен
                     </button>
                   </div>
                 </li>
@@ -487,9 +859,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Обмен"
+                      data-action="Купить"
                     >
-                      Обмен
+                      Купить
                     </button>
                   </div>
                 </li>
@@ -516,9 +888,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Купить"
+                      data-action="Обмен"
                     >
-                      Купить
+                      Обмен
                     </button>
                   </div>
                 </li>
@@ -538,9 +910,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Обмен"
+                      data-action="Купить"
                     >
-                      Обмен
+                      Купить
                     </button>
                   </div>
                 </li>
@@ -565,9 +937,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Купить"
+                      data-action="Обмен"
                     >
-                      Купить
+                      Обмен
                     </button>
                   </div>
                 </li>
@@ -587,9 +959,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Обмен"
+                      data-action="Купить"
                     >
-                      Обмен
+                      Купить
                     </button>
                   </div>
                 </li>
@@ -617,9 +989,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Купить"
+                      data-action="Обмен"
                     >
-                      Купить
+                      Обмен
                     </button>
                   </div>
                 </li>
@@ -639,9 +1011,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Обмен"
+                      data-action="Купить"
                     >
-                      Обмен
+                      Купить
                     </button>
                   </div>
                 </li>
@@ -666,9 +1038,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Купить"
+                      data-action="Обмен"
                     >
-                      Купить
+                      Обмен
                     </button>
                   </div>
                 </li>
@@ -688,9 +1060,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Обмен"
+                      data-action="Купить"
                     >
-                      Обмен
+                      Купить
                     </button>
                   </div>
                 </li>
@@ -717,9 +1089,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Купить"
+                      data-action="Обмен"
                     >
-                      Купить
+                      Обмен
                     </button>
                   </div>
                 </li>
@@ -739,9 +1111,9 @@
                     <div class="button-background bg-main"></div>
                     <button
                       class="button figure show-popUp bg-neutral-900"
-                      data-action="Обмен"
+                      data-action="Купить"
                     >
-                      Обмен
+                      Купить
                     </button>
                   </div>
                 </li>
@@ -767,7 +1139,10 @@
             style="max-width: 570px"
             alt="Фотография складированных КПП, готовых к отгрузке"
           />
-          <article class="article-section_about--garanty">
+          <article
+            class="article-section_about--garanty"
+            style="margin-top: 16px"
+          >
             <h2 class="article-section_about-heading fw-700">
               Получите агрегат в течение суток
             </h2>
@@ -803,6 +1178,108 @@
         </div>
       </section>
 
+      <section
+        class="slider-section section-margin container"
+        data-overflow="visible"
+        id="slider-document"
+      >
+        <div class="glide" id="docs-slider">
+          <div class="slider-section_about">
+            <h3 class="slider-section_about-header fw-700">
+              Отправляем готовые коробки с документами
+            </h3>
+            <div class="slider-section__controls" data-glide-el="controls">
+              <button data-glide-dir="<" style="transform: rotate(-180deg)" />
+              <button data-glide-dir=">" />
+            </div>
+          </div>
+
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/docs-slider/ГК_01.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/docs-slider/ГК_02.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/docs-slider/ГК_03.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/docs-slider/ГК_04.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/docs-slider/ГК_05.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/docs-slider/ГК_06.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/docs-slider/ГК_07.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/docs-slider/ГК_08.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/docs-slider/ГК_09.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/docs-slider/ГК_10.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section class="article-section section-margin" id="section-delivery">
         <div class="container flex-column--reversed">
           <img
@@ -811,10 +1288,10 @@
             src="./assets/img/Delivery.webp"
             alt="Процесс погрузки КПП в кузов перевозчика"
           />
-          <article class="article-section_about">
+          <article class="article-section_about" style="max-width: 644px">
             <h2
               class="article-section_about-heading fw-700"
-              style="max-width: 817px"
+              style="margin-top: 16px"
             >
               Доставка по России и СНГ
             </h2>
@@ -823,17 +1300,30 @@
             >
               Привезём по указанному адресу на своём транспорте
             </p>
-            <div class="delivery-options">
-              <div class="delivery-options_item">
-                <img loading="lazy" src="./assets/icons/Auto.svg" />
-                <p class="fw-500">Автотранспорт</p>
-                <p>Стандарт</p>
+            <div class="delivery-about">
+              <div class="delivery-options">
+                <div class="delivery-options_item">
+                  <img loading="lazy" src="./assets/icons/Auto.svg" />
+                  <p class="fw-500">Автотранспорт</p>
+                  <p>Стандарт</p>
+                </div>
+                <div class="delivery-options_item">
+                  <img loading="lazy" src="./assets/icons/Container.svg" />
+                  <p class="fw-500">Контейнерами по ЖД</p>
+                  <p>По запросу</p>
+                </div>
               </div>
-              <div class="delivery-options_item">
-                <img loading="lazy" src="./assets/icons/Container.svg" />
-                <p class="fw-500">Контейнерами по ЖД</p>
-                <p>По запросу</p>
-              </div>
+              <p class="delivery-about__description">
+                КПП обычно доставляем на европаллетах 1,2 × 0,8 м. <br />
+                Одна КПП — на одном паллете
+              </p>
+              <button
+                class="button show-popUp button-fs-changing bg-accent"
+                type="button "
+                data-action="Заказать звонок"
+              >
+                Заказать звонок
+              </button>
             </div>
           </article>
         </div>
@@ -947,6 +1437,272 @@
         </div>
       </section>
 
+      <section class="slider-section section-margin container">
+        <h3 class="article-section_about-heading fw-700">
+          Капитальный ремонт КПП
+        </h3>
+        <div class="glide reversed" id="repair-slider">
+          <div class="slider-section_about" data-column-order="2">
+            <article>
+              <p
+                class="slider-section_about-header"
+                style="max-width: 980px; margin-top: 8px"
+                data-text-align-mobile="left"
+              >
+                Специалисты стажировались на Петербургском тракторном заводе им.
+                Кирова и имеют стаж ремонта десятки лет!
+              </p>
+            </article>
+
+            <div class="slider-section__controls" data-glide-el="controls">
+              <button data-glide-dir="<" style="transform: rotate(-180deg)" />
+              <button data-glide-dir=">" />
+            </div>
+          </div>
+
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/repair-slider/КПП_01.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/repair-slider/КПП_02.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/repair-slider/КПП_03.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/repair-slider/КПП_04.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/repair-slider/КПП_05.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/repair-slider/КПП_06.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/repair-slider/КПП_07.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/repair-slider/КПП_08.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/repair-slider/КПП_09.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+
+              <li class="glide__slide">
+                <img
+                  src="./assets/img/repair-slider/КПП_10.webp"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+            </ul>
+          </div>
+          <div
+            class="glide__bullets"
+            data-glide-el="controls[nav]"
+            data-column-order="3"
+          >
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=3"></button>
+            <button class="glide__bullet" data-glide-dir="=4"></button>
+            <button class="glide__bullet" data-glide-dir="=5"></button>
+            <button class="glide__bullet" data-glide-dir="=6"></button>
+            <button class="glide__bullet" data-glide-dir="=7"></button>
+            <button class="glide__bullet" data-glide-dir="=8"></button>
+            <button class="glide__bullet" data-glide-dir="=9"></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-section section-margin" id="section-agregators">
+        <div class="container flex-column reversed-mobile">
+          <div class="glide reversed" id="agregators-slider">
+            <div class="slider-section__controls" data-glide-el="controls">
+              <button data-glide-dir="<" style="transform: rotate(-180deg)" />
+              <button data-glide-dir=">" />
+            </div>
+
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <img
+                    src="./assets/img/agregators-slider/НС_01.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    src="./assets/img/agregators-slider/НС_02.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    src="./assets/img/agregators-slider/НС_03.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    src="./assets/img/agregators-slider/НС_04.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    src="./assets/img/agregators-slider/НС_05.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    src="./assets/img/agregators-slider/НС_06.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    src="./assets/img/agregators-slider/НС_07.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    src="./assets/img/agregators-slider/НС_08.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    src="./assets/img/agregators-slider/НС_09.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+
+                <li class="glide__slide">
+                  <img
+                    src="./assets/img/agregators-slider/НС_10.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div
+              class="glide__bullets"
+              data-glide-el="controls[nav]"
+              data-column-order="3"
+            >
+              <button class="glide__bullet" data-glide-dir="=0"></button>
+              <button class="glide__bullet" data-glide-dir="=1"></button>
+              <button class="glide__bullet" data-glide-dir="=2"></button>
+              <button class="glide__bullet" data-glide-dir="=3"></button>
+              <button class="glide__bullet" data-glide-dir="=4"></button>
+              <button class="glide__bullet" data-glide-dir="=5"></button>
+              <button class="glide__bullet" data-glide-dir="=6"></button>
+              <button class="glide__bullet" data-glide-dir="=7"></button>
+              <button class="glide__bullet" data-glide-dir="=8"></button>
+              <button class="glide__bullet" data-glide-dir="=9"></button>
+            </div>
+          </div>
+
+          <article>
+            <h2
+              class="article-section_about-heading fw-700"
+              style="max-width: 608px"
+            >
+              Наши специалисты
+            </h2>
+
+            <section
+              class="text-s article-section--margin-xl"
+              style="line-height: 1.5"
+            >
+              <p>
+                Наши агрегатчики прошли профессиональную подготовку на Кировском
+                заводе ещё в 1970–1980 гг. в Ленинграде.
+              </p>
+              <br />
+              <p>
+                С тех пор ими были отремонтированы тысячи агрегатов и успешно
+                переданы все знания и навыки нынешнему действующему звену
+                агрегатчиков «Железное дело»
+              </p>
+              <br />
+              <p>
+                Вот почему агрегаты отремонтированные у нас «ходят» многие годы
+                и тысячи моточасов без нареканий.
+              </p>
+            </section>
+          </article>
+        </div>
+      </section>
+
       <section class="article-section section-margin">
         <div class="container flex-column--reversed">
           <img
@@ -955,7 +1711,7 @@
             src="./assets/img/agreement-photo-xl.webp"
             alt="Фотография пакета документов, гарантийного талона на отремонтированный КПП"
           />
-          <article class="article-section_about">
+          <article class="article-section_about" style="margin-top: 22px">
             <h2
               class="article-section_about-heading--xs article-section--margin-m fw-700"
             >
@@ -1000,6 +1756,7 @@
         </section>
       </div>
     </main>
+
     <footer class="footer bg-neutral-400 fc-neutral-900">
       <div class="container">
         <div class="footer--interactive">
@@ -1019,13 +1776,21 @@
                   >Доставка</a
                 >
               </li>
-              <li><a>Представители</a></li>
+              <li>
+                <a id="members-modal-toggle" style="cursor: pointer"
+                  >Представители</a
+                >
+              </li>
               <li>
                 <a class="smooth-scroll-anchor" href="#section-catalog"
                   >Выбор агрегата</a
                 >
               </li>
-              <li><a>Документы</a></li>
+              <li>
+                <a class="smooth-scroll-anchor" href="#slider-document"
+                  >Документы</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
@@ -1100,6 +1865,211 @@
           data-type="policy"
           >Политика конфиденциальности</a
         >
+      </div>
+    </div>
+    <div class="pop-up-wrapper" style="display: none" id="members-modal">
+      <div class="pop-up">
+        <span class="button-close" id="modal-close"></span>
+
+        <p id="members-modal__header">
+          Представители завода железное дело в регионах
+        </p>
+        <ul role="list" class="members-list">
+          <li class="members-list__item">
+            <img
+              width="80"
+              height="80"
+              loading="lazy"
+              src="/assets/img/partners/partner2.webp"
+              alt=""
+              style="margin-bottom: 8px"
+            />
+            <div>
+              <div
+                class="members-list__item--header fw-700"
+                style="margin-bottom: 6px"
+              >
+                Москва и Московская область
+              </div>
+              <div>Тюлькин Сергей Васильевич</div>
+            </div>
+          </li>
+
+          <li class="members-list__item">
+            <img
+              width="80"
+              height="80"
+              loading="lazy"
+              src="/assets/img/partners/partner3.webp"
+              alt=""
+              style="margin-bottom: 8px"
+            />
+            <div>
+              <div
+                class="members-list__item--header fw-700"
+                style="margin-bottom: 6px"
+              >
+                Новгородская область
+              </div>
+              <div>Юрлов Тарас Игоревич</div>
+            </div>
+          </li>
+          <li class="members-list__item">
+            <img
+              width="80"
+              height="80"
+              loading="lazy"
+              src="/assets/img/partners/partner4.webp"
+              alt=""
+              style="margin-bottom: 8px"
+            />
+            <div>
+              <div
+                class="members-list__item--header fw-700"
+                style="margin-bottom: 6px"
+              >
+                Самарская область
+              </div>
+              <div>Чайников Сергей Николаевич</div>
+            </div>
+          </li>
+          <li class="members-list__item">
+            <img
+              width="80"
+              height="80"
+              loading="lazy"
+              src="/assets/img/partners/partner5.webp"
+              alt=""
+              style="margin-bottom: 8px"
+            />
+            <div>
+              <div
+                class="members-list__item--header fw-700"
+                style="margin-bottom: 6px"
+              >
+                Волгоградская область
+              </div>
+              <div>Прудников Александр Владимирович</div>
+            </div>
+          </li>
+          <li class="members-list__item">
+            <img
+              width="80"
+              height="80"
+              loading="lazy"
+              src="/assets/img/partners/partner6.webp"
+              alt=""
+              style="margin-bottom: 8px"
+            />
+            <div>
+              <div
+                class="members-list__item--header fw-700"
+                style="margin-bottom: 6px"
+              >
+                Саратовская область
+              </div>
+              <div>Горев Евгений Михайлович</div>
+            </div>
+          </li>
+          <li class="members-list__item">
+            <img
+              width="80"
+              height="80"
+              loading="lazy"
+              src="/assets/img/partners/partner7.webp"
+              alt=""
+              style="margin-bottom: 8px"
+            />
+            <div>
+              <div
+                class="members-list__item--header fw-700"
+                style="margin-bottom: 6px"
+              >
+                Борисоглебск
+              </div>
+              <div>Киселёв Алексей Николаевич</div>
+            </div>
+          </li>
+          <li class="members-list__item">
+            <img
+              width="80"
+              height="80"
+              loading="lazy"
+              src="/assets/img/partners/partner8.webp"
+              alt=""
+              style="margin-bottom: 8px"
+            />
+            <div>
+              <div
+                class="members-list__item--header fw-700"
+                style="margin-bottom: 6px"
+              >
+                Республика Коми
+              </div>
+              <div>Чёрных Алексей Владимирович</div>
+            </div>
+          </li>
+          <li class="members-list__item">
+            <img
+              width="80"
+              height="80"
+              loading="lazy"
+              src="/assets/img/partners/partner9.webp"
+              alt=""
+              style="margin-bottom: 8px"
+            />
+            <div>
+              <div
+                class="members-list__item--header fw-700"
+                style="margin-bottom: 6px"
+              >
+                Рязанская область
+              </div>
+              <div>Большаков Денис Александрович</div>
+            </div>
+          </li>
+          <li class="members-list__item">
+            <img
+              width="80"
+              height="80"
+              loading="lazy"
+              src="/assets/img/partners/partner10.webp"
+              alt=""
+              style="margin-bottom: 8px"
+            />
+            <div>
+              <div
+                class="members-list__item--header fw-700"
+                style="margin-bottom: 6px"
+              >
+                Владимирская область
+              </div>
+              <div>Ямшанов Андрей Владимирович</div>
+            </div>
+          </li>
+          <li class="members-list__item">
+            <img
+              width="80"
+              height="80"
+              loading="lazy"
+              src="/assets/img/partners/partner11.webp"
+              alt=""
+              style="margin-bottom: 8px"
+            />
+            <div>
+              <div
+                class="members-list__item--header fw-700"
+                style="margin-bottom: 6px"
+              >
+                Кировская область
+              </div>
+              <div id="owner">
+                <span>Земцов Иван Геннадьевич</span>
+                <span class="bg-accent">собственник</span>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
     <script type="module" src="/index.js"></script>

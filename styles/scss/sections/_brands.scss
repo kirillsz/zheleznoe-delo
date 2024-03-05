@@ -63,14 +63,17 @@
     }
     grid-template-columns: repeat(2, minmax(min(120px, 100%), 1fr));
     @media only screen and (min-width: 64em) {
-      grid-template-columns: repeat(4, minmax(min(280px, 100%), 1fr));
+      grid-template-columns: repeat(4, minmax(min(187px, 100%), 1fr));
+    }
+    @media only screen and (min-width: 84em) {
+      grid-template-columns: repeat(4, minmax(min(227px, 100%), 1fr));
     }
   }
   &_vehicle-list {
     gap: 32px 16px;
     grid-template-columns: repeat(2, minmax(min(142px, 100%), 1fr));
     @media only screen and (min-width: 64em) {
-      grid-template-columns: repeat(4, minmax(min(280px, 100%), 1fr));
+      grid-template-columns: repeat(4, minmax(min(227px, 100%), 1fr));
       gap: 2rem;
     }
     &__item {
