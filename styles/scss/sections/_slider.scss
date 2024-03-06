@@ -1,11 +1,5 @@
 @use "../colors" as v;
 .slider-section {
-  &.container[data-overflow="visible"] {
-    @media screen and (max-width: 60em) {
-      --padding: 0;
-      padding-left: 20px;
-    }
-  }
   &_about {
     width: 100%;
 
@@ -28,9 +22,15 @@
     }
   }
   &__controls {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 60em) {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      z-index: 99;
+    }
     @media screen and (min-width: 60em) {
-      display: flex;
       gap: 16px;
       & > * {
         cursor: pointer;
@@ -39,6 +39,8 @@
     & button {
       border: none;
       background: url("/assets/icons/SliderArrow.svg") center no-repeat;
+      background-color: white;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
       width: 56px;
       height: 48px;
     }
@@ -116,9 +118,19 @@
     }
   }
   & .slider-section__controls {
+    @media screen and (max-width: 60em) {
+      transform: translateY(-7.5vh);
+    }
     justify-content: space-between;
     width: 100%;
     position: absolute;
     bottom: 35px;
+  }
+}
+#repair-slider {
+  & .slider-section__controls {
+    @media screen and (max-width: 60em) {
+      transform: translateY(-15vh);
+    }
   }
 }

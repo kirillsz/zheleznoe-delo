@@ -871,12 +871,6 @@ select {
   color: #95959d;
 }
 
-@media screen and (max-width: 60em) {
-  .slider-section.container[data-overflow=visible] {
-    --padding: 0;
-    padding-left: 20px;
-  }
-}
 .slider-section_about {
   width: 100%;
 }
@@ -902,11 +896,19 @@ select {
   }
 }
 .slider-section__controls {
-  display: none;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 60em) {
+  .slider-section__controls {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+  }
 }
 @media screen and (min-width: 60em) {
   .slider-section__controls {
-    display: flex;
     gap: 16px;
   }
   .slider-section__controls > * {
@@ -916,6 +918,8 @@ select {
 .slider-section__controls button {
   border: none;
   background: url("/assets/icons/SliderArrow.svg") center no-repeat;
+  background-color: white;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   width: 56px;
   height: 48px;
 }
@@ -993,6 +997,17 @@ select {
   width: 100%;
   position: absolute;
   bottom: 35px;
+}
+@media screen and (max-width: 60em) {
+  #section-agregators .slider-section__controls {
+    transform: translateY(-7.5vh);
+  }
+}
+
+@media screen and (max-width: 60em) {
+  #repair-slider .slider-section__controls {
+    transform: translateY(-15vh);
+  }
 }
 
 @font-face {
@@ -1518,6 +1533,10 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
+}
+
+button {
+  color: #000;
 }
 
 /*# sourceMappingURL=style.css.map */

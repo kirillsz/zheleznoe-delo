@@ -9,12 +9,10 @@ export function initSlider() {
       800: {
         type: "slider",
         perView: 2,
-        peek: { before: 0, after: 45 },
         gap: 16,
       },
       600: {
         perView: 1,
-        peek: { before: 0, after: 85 },
         gap: 16,
       },
     },
