@@ -34,4 +34,5 @@ document
 document
   .getElementById("modal-close")
   .addEventListener("click", () => (popUpWrapper.style.display = "none"));
+
 initSlider();
