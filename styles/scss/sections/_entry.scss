@@ -1,5 +1,6 @@
 @use "../colors.scss" as c;
 .entry-section {
+  position: relative;
   &-founding-date {
     line-height: 1;
     @media all and (min-width: 40em) {
@@ -100,9 +101,8 @@
       height: 720px;
     }
     & .container {
-      overflow: hidden;
       height: 100%;
-      position: relative;
+      overflow: hidden;
       @media all and (min-width: 64em) {
         display: flex;
         flex-direction: column;
@@ -194,13 +194,13 @@
         position: absolute;
         z-index: 0;
         right: 10vw;
-        top: -16px;
+        top: -20px;
       }
       @media only screen and (min-width: 64em) {
-        right: 8vw;
+        right: 12vw;
       }
       @media only screen and (min-width: 100em) {
-        right: 6vw;
+        right: 18vw;
       }
     }
     &__footer {

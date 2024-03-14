@@ -65,6 +65,9 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.entry-section {
+  position: relative;
+}
 .entry-section-founding-date {
   line-height: 1;
 }
@@ -182,9 +185,8 @@ select {
   }
 }
 .entry-section--main .container {
-  overflow: hidden;
   height: 100%;
-  position: relative;
+  overflow: hidden;
 }
 @media all and (min-width: 64em) {
   .entry-section--main .container {
@@ -286,17 +288,17 @@ select {
     position: absolute;
     z-index: 0;
     right: 10vw;
-    top: -16px;
+    top: -20px;
   }
 }
 @media only screen and (min-width: 64em) {
   .entry-section--main-decor-object {
-    right: 8vw;
+    right: 12vw;
   }
 }
 @media only screen and (min-width: 100em) {
   .entry-section--main-decor-object {
-    right: 6vw;
+    right: 18vw;
   }
 }
 .entry-section--main__footer {
