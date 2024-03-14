@@ -1,7 +1,17 @@
+@use "../colors" as c;
 .catalog {
   display: grid;
+  position: relative;
   row-gap: 40px;
   font-size: 16px;
+  @media all and (min-width: 45em) {
+    column-gap: 16px;
+    grid-template-columns: repeat(2, minmax(min(240px, 100%), 1fr));
+  }
+  @media all and (min-width: 64em) {
+    column-gap: 24px;
+    grid-template-columns: repeat(3, minmax(min(340px, 100%), 1fr));
+  }
   & .button-background,
   button {
     clip-path: polygon(15% 0, 85% 0, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
@@ -26,20 +36,21 @@
         }
       }
       & p {
-        @media all and (min-width: 64em) {
+        @media all and (min-width: 40em) {
           min-height: 48px;
         }
       }
     }
     & img {
       margin: 0 auto;
+      min-height: 318px;
     }
     &_button-row {
       height: 48px;
       display: grid;
       font-weight: 500;
       gap: 4px;
-      grid-template-columns: repeat(3, minmax(min(107px, 100%), 1fr));
+      grid-template-columns: repeat(3, minmax(min(104px, 100%), 1fr));
       grid-template-rows: auto;
       @media all and (min-width: 64em) {
         gap: 8px;
@@ -49,33 +60,59 @@
     }
   }
   &-banner {
-    & img {
-      width: 82px;
+    position: relative;
+    background-color: c.$color-accent;
+    clip-path: polygon(26px 0, 100% 0, 100% 100%, 0 100%, 0 42px);
+    padding: 24px;
+    height: min-content;
+    overflow: hidden;
+
+    @media all and (min-width: 45em) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    @media all and (min-width: 64em) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      padding: 36px;
+    }
+
+    & .decor {
       margin-bottom: 40px;
+      @media all and (min-width: 40em) {
+        width: 120px;
+        height: 104px;
+      }
       @media all and (min-width: 64em) {
         width: 150px;
+        height: 127px;
       }
     }
-    padding: 24px;
-    background: url("/assets/icons/BannerBG_360.svg") no-repeat;
-    background-size: 100%;
+
     &_content {
       font-size: 28px;
+      @media all and (min-width: 40em) {
+        font-size: 40px;
+      }
       @media all and (min-width: 64em) {
         font-size: 48px;
       }
     }
-    @media all and (min-width: 64em) {
-      grid-row-start: 4;
-      grid-row-end: 5;
-      grid-column-start: 2;
-      grid-column-end: 4;
-
-      background: url("/assets/icons/BannerBG_1440\,768.svg") no-repeat;
-    }
   }
-  @media all and (min-width: 64em) {
-    column-gap: 24px;
-    grid-template-columns: repeat(3, minmax(min(421px, 100%), 1fr));
+  & .bg-decor {
+    position: absolute;
+    z-index: -1;
+    --sizing: 240px;
+    width: var(--sizing);
+    height: var(--sizing);
+    right: calc(var(--sizing) * -0.2);
+    bottom: calc(var(--sizing) * -0.3);
+    @media all and (min-width: 45em) {
+      --sizing: 440px;
+    }
+    @media all and (min-width: 64em) {
+      --sizing: 549px;
+      bottom: -20px;
+    }
   }
 }

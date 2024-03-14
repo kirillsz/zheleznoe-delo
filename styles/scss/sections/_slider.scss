@@ -2,18 +2,20 @@
 .slider-section {
   &_about {
     width: 100%;
+    margin-bottom: 16px;
 
-    @media screen and (min-width: 60em) {
+    @media screen and (min-width: 64em) {
       display: flex;
       justify-content: space-between;
       align-items: end;
+      margin-bottom: 38px;
     }
     &-header {
       font-size: 24px;
       text-align: center;
       max-width: 320px;
       margin: 0 auto;
-      @media screen and (min-width: 60em) {
+      @media screen and (min-width: 40em) {
         text-align: left;
         max-width: none;
         font-size: 32px;
@@ -24,25 +26,18 @@
   &__controls {
     display: flex;
     justify-content: space-between;
-    @media screen and (max-width: 60em) {
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      z-index: 99;
-    }
-    @media screen and (min-width: 60em) {
-      gap: 16px;
-      & > * {
-        cursor: pointer;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    transform: translateY(-50%);
+
+    & > * {
+      transform: translateX(-0.85em);
+
+      &:last-child {
+        rotate: (-180deg);
       }
-    }
-    & button {
-      border: none;
-      background: url("/assets/icons/SliderArrow.svg") center no-repeat;
-      background-color: white;
-      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      width: 56px;
-      height: 48px;
     }
   }
 }
@@ -50,7 +45,7 @@
   &.reversed {
     display: flex;
     flex-direction: column;
-    @media screen and (max-width: 60em) {
+    @media screen and (max-width: 64em) {
       & > [data-column-order="2"] {
         order: 2;
       }
@@ -60,12 +55,6 @@
     }
   }
 
-  &__track {
-    margin-top: 16px;
-    @media screen and (min-width: 60em) {
-      margin-top: 38px;
-    }
-  }
   &__slide {
     img {
       border-radius: 3px;
@@ -74,9 +63,9 @@
   }
   &__bullets {
     width: fit-content;
-    margin: 40px auto;
-    @media screen and (max-width: 60em) {
-      margin: 24px auto;
+    margin: 4px auto;
+    @media screen and (min-width: 40em) {
+      margin: 6px auto;
     }
   }
   &__bullet {
@@ -89,7 +78,7 @@
     }
   }
   [data-text-align-mobile="left"] {
-    @media screen and (max-width: 60em) {
+    @media screen and (max-width: 64em) {
       text-align: left;
       font-size: 20px;
       line-height: 1.5;
@@ -99,38 +88,67 @@
 
 #section-agregators {
   & article {
-    @media screen and (min-width: 60em) {
+    @media screen and (min-width: 64em) {
       margin-top: 48px;
     }
     section {
-      @media screen and (min-width: 60em) {
+      @media screen and (min-width: 64em) {
         max-width: 533px;
       }
     }
   }
 
   & .glide {
-    @media screen and (min-width: 60em) {
+    @media screen and (min-width: 64em) {
       max-width: 533px;
     }
     &__track {
       margin: 0;
     }
   }
-  & .slider-section__controls {
-    @media screen and (max-width: 60em) {
-      transform: translateY(-7.5vh);
-    }
-    justify-content: space-between;
-    width: 100%;
-    position: absolute;
-    bottom: 35px;
-  }
 }
 #repair-slider {
-  & .slider-section__controls {
-    @media screen and (max-width: 60em) {
-      transform: translateY(-15vh);
+  & .slider-section_about-header {
+    margin: 0;
+    min-height: 150px;
+    max-width: none;
+    @media screen and (min-width: 420px) {
+      min-height: 100px;
     }
+    @media screen and (min-width: 64em) {
+      max-width: 1100px;
+      min-height: 80px;
+    }
+  }
+}
+.slider__button {
+  cursor: pointer;
+  position: relative;
+  height: 62px;
+  width: 72px;
+  background-color: v.$color-accent;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 16px;
+    top: 46%;
+    right: 50%;
+    background-color: black;
+  }
+  &::before {
+    rotate: (-45deg);
+  }
+  &::after {
+    transform: translate(-8px, -7px);
+    rotate: (45deg);
   }
 }

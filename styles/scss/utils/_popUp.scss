@@ -64,13 +64,16 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 24px;
+  @media all and (min-width: 40em) {
+    font-size: 20px;
+  }
   @media all and (min-width: 64em) {
     grid-template-columns: 1fr 1fr;
     column-gap: 96px;
   }
   &__item {
     text-align: left;
-    @media all and (min-width: 64em) {
+    @media all and (min-width: 40em) {
       display: flex;
       column-gap: 16px;
       align-items: center;
@@ -82,7 +85,7 @@
     }
     &--header {
       font-size: 18px;
-      @media all and (min-width: 64em) {
+      @media all and (min-width: 40em) {
         font-size: 24px;
       }
     }
@@ -94,10 +97,9 @@
     max-width: 274px;
     font-size: 20px;
     margin-bottom: 34px;
-    @media all and (min-width: 64em) {
+    @media all and (min-width: 40em) {
       font-size: 32px;
       max-width: none;
-      text-align: center;
     }
   }
 
@@ -105,17 +107,19 @@
     width: 100%;
     display: block;
     height: 100%;
-
+    width: fit-content;
     overflow-y: scroll;
-
+    @media all and (min-width: 40em) {
+      padding: 32px;
+    }
     @media all and (min-width: 100em) {
       display: flex;
       align-items: center;
       width: 1312px;
-      height: fit-content;
     }
     @media all and (min-width: 64em) and (min-height: 680px) {
       overflow: hidden;
+      height: fit-content;
     }
   }
   &.pop-up-wrapper {

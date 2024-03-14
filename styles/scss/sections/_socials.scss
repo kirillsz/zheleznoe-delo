@@ -1,0 +1,32 @@
+.socials {
+  &__links {
+    display: flex;
+    column-gap: 32px;
+  }
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  & h3 {
+    max-width: 300px;
+    @media only screen and (min-width: 40em) {
+      max-width: none;
+      margin-bottom: 14px;
+    }
+  }
+  & p {
+    margin-bottom: 42px;
+    @media only screen and (min-width: 40em) {
+      margin-bottom: 64px;
+    }
+    @media only screen and (min-width: 64em) {
+      max-width: 980px;
+    }
+  }
+}
+.socials__links a:hover {
+  opacity: 0.6;
+}

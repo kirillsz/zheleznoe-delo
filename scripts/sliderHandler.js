@@ -1,4 +1,5 @@
 import Glide from "@glidejs/glide";
+import "./repailSliderHandler";
 export function initSlider() {
   new Glide("#docs-slider", {
     type: "carousel",
@@ -6,8 +7,7 @@ export function initSlider() {
     animationDuration: 300,
     perView: 3,
     breakpoints: {
-      800: {
-        type: "slider",
+      1024: {
         perView: 2,
         gap: 16,
       },
@@ -24,10 +24,8 @@ export function initSlider() {
     startAt: 0,
     perView: 4,
     breakpoints: {
-      800: {
-        type: "slider",
+      1024: {
         perView: 2,
-        peek: { before: 0, after: 45 },
         gap: 16,
       },
       600: {
@@ -42,17 +40,5 @@ export function initSlider() {
     animationDuration: 300,
     startAt: 0,
     perView: 1,
-    breakpoints: {
-      800: {
-        type: "slider",
-        perView: 2,
-        peek: { before: 0, after: 45 },
-        gap: 16,
-      },
-      600: {
-        perView: 1,
-        gap: 16,
-      },
-    },
   }).mount();
 }

@@ -11,13 +11,14 @@
       flex-direction: column;
       gap: 24px;
 
-      @media all and (min-width: 64em) {
+      @media all and (min-width: 40em) {
+        font-size: 20px;
         flex-direction: row;
         gap: 40px;
       }
     }
     & nav {
-      @media all and (min-width: 64em) {
+      @media all and (min-width: 75em) {
         display: flex;
         justify-content: space-between;
       }
@@ -26,6 +27,14 @@
   &--copyright {
     &__main {
       text-align: center;
+      @media all and (min-width: 75em) {
+        text-align: start;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: end;
+        justify-content: space-between;
+        font-size: 16px;
+      }
       & div {
         @media all and (max-width: 64em) {
           margin-top: 24px;
@@ -35,7 +44,7 @@
         display: flex;
         column-gap: 18px;
         align-items: center;
-        @media all and (max-width: 64em) {
+        @media all and (max-width: 75em) {
           margin-bottom: 40px;
           flex-direction: column;
         }
@@ -50,14 +59,6 @@
           font-size: 40px;
         }
       }
-      @media all and (min-width: 64em) {
-        text-align: start;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: end;
-        justify-content: space-between;
-        font-size: 16px;
-      }
     }
     &__description {
       line-height: 1.55;
@@ -67,5 +68,20 @@
   }
   .fc-not-accent {
     color: #95959d;
+  }
+  &__socials {
+    @media all and (min-width: 40em) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @media all and (min-width: 75em) {
+      gap: 40px;
+    }
+    & .socials__links {
+      display: none;
+      @media all and (min-width: 40em) {
+        display: flex;
+      }
+    }
   }
 }

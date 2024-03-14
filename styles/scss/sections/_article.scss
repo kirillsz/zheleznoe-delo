@@ -18,11 +18,12 @@
     }
   }
   &-delivery-time {
-    margin-top: 16px;
     font-size: 24px;
+    @media all and (min-width: 40em) {
+      font-size: 32px;
+    }
     @media all and (min-width: 64em) {
       font-size: 40px;
-      margin-top: 12px;
     }
   }
 
@@ -33,6 +34,7 @@
 
       @media all and (min-width: 40em) {
         font-size: 48px;
+        margin-bottom: 16px;
       }
       @media all and (min-width: 64em) {
         font-size: 64px;
@@ -91,6 +93,9 @@
   /* Utils */
   &--margin-m {
     margin-bottom: 16px;
+    @media all and (min-width: 40em) {
+      margin-bottom: 24px;
+    }
   }
   &--margin-xl {
     margin-bottom: 24px;
@@ -114,10 +119,6 @@
     }
   }
   .delivery-about {
-    @media all and (min-width: 64em) {
-      margin-top: 24px;
-      max-width: 644px;
-    }
     & .button {
       max-width: none;
     }
@@ -134,6 +135,37 @@
   & .reversed-mobile {
     @media all and (max-width: 64em) {
       flex-direction: column-reverse;
+    }
+  }
+  & .content-wrapper {
+    @media (40em <= width < 64em) {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      & p {
+        max-width: 360px;
+      }
+    }
+  }
+}
+
+#section {
+  &-recieve {
+    & .button {
+      max-width: none;
+    }
+    @media all and (min-width: 64em) {
+      & .article-section-img {
+        max-width: 533px;
+      }
+    }
+  }
+  &-delivery {
+    & .article-section_about {
+      @media all and (min-width: 64em) {
+        margin-top: 24px;
+        max-width: 644px;
+      }
     }
   }
 }
