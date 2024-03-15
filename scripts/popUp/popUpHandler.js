@@ -3,6 +3,8 @@ window.addEventListener("DOMContentLoaded", function () {
   let membersPopUpWrapper = document.getElementById("members-modal");
   const popUpWrapper = document.querySelector(".pop-up-wrapper");
   const inputActionType = popUpWrapper.querySelector("#input_action-type");
+  const inputPhoneNumber = popUpWrapper.querySelector("input[type='tel']");
+
   const popUpShowElementsArray = document.querySelectorAll(".show-popUp");
   const popUpHideElementsArray = document.querySelectorAll(".hide-popUp");
   const catalogItems = document.querySelectorAll(".catalog-item");
@@ -21,6 +23,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   const popUpShow = (e) => {
     popUpWrapper.style.display = "block";
+    inputPhoneNumber.focus();
     setFormAction(e);
   };
   const popUpHide = () => {
@@ -47,10 +50,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
   document
     .getElementById("members-modal-toggle")
-    .addEventListener(
-      "click",
-      () => (membersPopUpWrapper.style.display = "block")
-    );
+    .addEventListener("click", () => {
+      membersPopUpWrapper.style.display = "block";
+    });
   document
     .getElementById("modal-close")
     .addEventListener(
