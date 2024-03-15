@@ -58,6 +58,7 @@ body {
   width: 100%;
   max-width: 320px;
   border: none;
+  color: c.$color-main;
   padding: 0.8rem 1.5rem;
   font-size: 16px;
   clip-path: var(--button-shape);
@@ -142,8 +143,11 @@ body {
 .text-underline {
   text-decoration: 2px underline;
   text-underline-offset: 4px;
+  --webkit-text-decoration: 2px underline;
+  --webkit-text-underline-offset: 4px;
   &[data-type="policy"] {
     text-decoration: 1px underline;
+    --webkit-text-decoration: 1px underline;
   }
 }
 

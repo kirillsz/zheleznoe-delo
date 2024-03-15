@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,8 +68,21 @@
             <span
               class="entry-section--main__description-location-data fc-neutral-900 fw-500"
               style="text-align: center"
-              >Работаем по всей России</span
-            >
+              >Работаем по всей России
+            </span>
+            <img
+              class="entry-section--main__bg-obj"
+              src="assets/img/entry-section_decor-obj--mobile.webp"
+              srcset="
+                assets/img/entry-section_decor-obj--tablet.webp 542w,
+                assets/img/entry-section_decor-obj.webp         599w
+              "
+              sizes="(max-width:
+            40em) 288px, (max-width: 64em) 542px, 599px"
+              alt="Фотография
+            свисающего КПП черного цвета"
+              fetchpriority="high"
+            />
           </div>
           <div class="entry-section--main__footer">
             <div class="entry-section-founding-date">
@@ -110,28 +123,7 @@
               </a>
             </div>
           </div>
-          <picture>
-            <source
-              media="(min-width: 64em)"
-              srcset="./assets/img/entry-section_decor-obj--desktop.webp"
-              width="579"
-              height="591"
-            />
-            <source
-              media="(min-width: 40em)"
-              srcset="./assets/img/entry-section_decor-obj--desktop.webp"
-              width="523"
-              height="534"
-            />
-            <img
-              decoding="async"
-              class="entry-section--main-decor-object"
-              src="./assets/img/entry-section_decor-obj--mobile.webp"
-              alt="Фотография свисающего КПП черного цвета"
-              width="286"
-              height="308"
-            />
-          </picture>
+
           <button
             class="button show-popUp bg-accent entry-section--main-mobile-button"
             type="button"
@@ -1941,7 +1933,7 @@
             Фото и видео вашей КПП
           </h3>
           <p class="article-section_about-heading--accent">
-            Запросите фото и видео сборки, испытаний, откатки и отрузки КПП.
+            Запросите фото и видео сборки, испытаний, обкатки и отрузки КПП.
             Покажем все процессы по ремонту именно той КПП, которую отправим вам
           </p>
           <div class="socials__links">
@@ -2768,7 +2760,6 @@
         <div class="container flex-column--reversed">
           <img
             decoding="async"
-            loading="lazy"
             class="article-section-img"
             src="./assets/img/agreement-photo-xl.webp"
             alt="Фотография пакета документов, гарантийного талона на отремонтированный КПП"
