@@ -1,6 +1,6 @@
 import Glide from "@glidejs/glide";
 import "./repailSliderHandler";
-export function initSlider() {
+window.addEventListener("DOMContentLoaded", function () {
   new Glide("#docs-slider", {
     type: "carousel",
     startAt: 0,
@@ -41,4 +41,4 @@ export function initSlider() {
     startAt: 0,
     perView: 1,
   }).mount();
-}
+});

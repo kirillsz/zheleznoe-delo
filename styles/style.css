@@ -1499,6 +1499,23 @@ select {
   padding: 0 0.2rem 0.1rem 0.2rem;
 }
 
+#send-form__response {
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: fixed;
+  z-index: 999;
+  bottom: 12px;
+  right: 12px;
+  padding: 0.8rem;
+  transition: opacity 700ms linear;
+}
+@media all and (min-width: 64em) {
+  #send-form__response {
+    bottom: 24px;
+  }
+}
+
 .form__input {
   height: 48px;
   padding: 18px 12px;
