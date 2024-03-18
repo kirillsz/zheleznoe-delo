@@ -556,9 +556,13 @@ select {
 }
 @media only screen and (min-width: 40em) {
   .quiz-section__about {
-    text-align: center;
     font-size: 40px;
     margin-bottom: 32px;
+  }
+}
+@media only screen and (40em <= width < 64em) {
+  .quiz-section__about {
+    text-align: center;
   }
 }
 .quiz-section__interactive {

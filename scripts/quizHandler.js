@@ -15,6 +15,9 @@ window.addEventListener("DOMContentLoaded", function () {
   const tractorTypeInput = document.querySelector(
     ".quiz-section #tractor-user-choice__input"
   );
+  const sendFormInputTelephone = document.querySelector(
+    ".quiz-section input[type='tel']"
+  );
   var progressBar = document.querySelector(
     ".quiz-section__interactive_progress-bar--completed"
   );
@@ -28,6 +31,9 @@ window.addEventListener("DOMContentLoaded", function () {
     document.querySelector(
       `.quiz-section .current-step[data-step-content='${forwardStepIndex}']`
     ).style.display = "flex";
+    if (forwardStepIndex === 4) {
+      sendFormInputTelephone.focus();
+    }
   };
 
   const toggleButtonState = (input, state) => {

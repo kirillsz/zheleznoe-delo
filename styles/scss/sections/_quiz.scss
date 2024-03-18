@@ -16,9 +16,12 @@
     margin-bottom: 16px;
     font-size: 24px;
     @media only screen and (min-width: 40em) {
-      text-align: center;
       font-size: 40px;
       margin-bottom: 32px;
+    }
+
+    @media only screen and (40em<= width < 64em) {
+      text-align: center;
     }
   }
   &__interactive {
