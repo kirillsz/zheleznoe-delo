@@ -48,6 +48,7 @@
     &_button-row {
       height: 48px;
       display: grid;
+      max-width: 320px;
       font-weight: 500;
       gap: 4px;
       grid-template-columns: repeat(3, minmax(min(104px, 100%), 1fr));
