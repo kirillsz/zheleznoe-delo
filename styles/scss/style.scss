@@ -143,11 +143,12 @@ body {
 .text-underline {
   text-decoration: 2px underline;
   text-underline-offset: 4px;
-  --webkit-text-decoration: 2px underline;
-  --webkit-text-underline-offset: 4px;
+  /*IOS*/
+  --webkit-text-decoration:underline;
+  --webkit-text-decoration-thickness: 2px;
   &[data-type="policy"] {
     text-decoration: 1px underline;
-    --webkit-text-decoration: 1px underline;
+    --webkit-text-decoration-thickness: 1px;
   }
 }
 
