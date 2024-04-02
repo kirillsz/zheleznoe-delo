@@ -4,14 +4,14 @@
     flex-direction: column;
 
     &--reversed {
-      @media all and (min-width: 64em) {
+      @media all and (min-width: 70em) {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
         column-gap: 32px;
       }
     }
-    @media all and (min-width: 64em) {
+    @media all and (min-width: 70em) {
       flex-direction: row;
       justify-content: space-between;
       column-gap: 32px;
@@ -25,16 +25,10 @@
 
   &_about {
     &-heading {
-      font-size: 32px;
+      font-size: clamp(32px,4.5vw,64px);
       margin-bottom: 8px;
 
-      @media all and (min-width: 40em) {
-        font-size: 48px;
-        margin-bottom: 16px;
-      }
-      @media all and (min-width: 64em) {
-        font-size: 64px;
-      }
+    
 
       &--xs {
         font-size: 24px;
@@ -42,7 +36,7 @@
         @media all and (min-width: 40em) {
           font-size: 48px;
         }
-        @media all and (min-width: 64em) {
+        @media all and (min-width: 70em) {
           font-size: 64px;
         }
       }
@@ -52,7 +46,7 @@
         @media all and (min-width: 40em) {
           font-size: 24px;
         }
-        @media all and (min-width: 64em) {
+        @media all and (min-width: 70em) {
           font-size: 32px;
         }
       }
@@ -67,7 +61,7 @@
       list-style-image: url("/assets/icons/ListPoint.svg");
     }
     &--garanty {
-      @media all and (min-width: 64em) {
+      @media all and (min-width: 70em) {
         max-width: 564px;
       }
     }
@@ -77,7 +71,7 @@
   }
 
   &-img {
-    @media all and (min-width: 64em) {
+    @media all and (min-width: 70em) {
       max-height: 535px;
       margin-bottom: 0.85rem;
       #section-delivery & {
@@ -95,7 +89,7 @@
   }
   &--margin-xl {
     margin-bottom: 24px;
-    @media all and (min-width: 64em) {
+    @media all and (min-width: 70em) {
       margin-bottom: 32px;
     }
   }
@@ -106,7 +100,7 @@
     &_item {
       img {
         margin-bottom: 44px;
-        @media all and (min-width: 64em) {
+        @media all and (min-width: 70em) {
           margin-bottom: 64px;
         }
       }
@@ -123,18 +117,18 @@
         top: 16px;
         bottom: 24px;
       }
-      @media all and (min-width: 64em) {
+      @media all and (min-width: 70em) {
         margin-top: 24px;
       }
     }
   }
   & .reversed-mobile {
-    @media all and (max-width: 64em) {
+    @media all and (max-width: 70em) {
       flex-direction: column-reverse;
     }
   }
   & .content-wrapper {
-    @media (35em <= width < 64em) {
+    @media (35em <= width < 60em) {
       display: flex;
       align-items: start;
       justify-content: space-between;
@@ -147,13 +141,21 @@
 }
 
 #section {
+ 
   &-regions {
+    & .flex-column {
+      @media all and (min-width: 70em) {
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 32px;
+      }
+    }
     & .article-section_about-heading--accent {
       margin-bottom: 16px;
     }
     & h3 {
       margin-bottom: 12px;
-      @media all and (min-width: 64em) {
+      @media all and (min-width: 70em) {
         margin-bottom: 8px;
       }
     }
@@ -162,7 +164,7 @@
     & .button {
       max-width: none;
     }
-    @media all and (min-width: 64em) {
+    @media all and (min-width: 70em) {
       & .article-section-img {
         max-width: 533px;
       }
@@ -170,7 +172,7 @@
   }
   &-delivery {
     & .article-section_about {
-      @media all and (min-width: 64em) {
+      @media all and (min-width: 70em) {
         margin-top: 24px;
         max-width: 644px;
       }

@@ -88,18 +88,18 @@
 
 #section-agregators {
   & article {
-    @media screen and (min-width: 64em) {
+    @media screen and (min-width: 70em) {
       margin-top: 48px;
     }
     section {
-      @media screen and (min-width: 64em) {
+      @media screen and (min-width: 70em) {
         max-width: 533px;
       }
     }
   }
 
   & .glide {
-    @media screen and (min-width: 64em) {
+    @media screen and (min-width: 70em) {
       max-width: 533px;
     }
     &__track {
