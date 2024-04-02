@@ -1,16 +1,20 @@
 @use "../colors" as c;
 .catalog {
+  --columns-number: 1;
+  grid-template-columns: repeat(var(--columns-number), 1fr);
   display: grid;
   position: relative;
   row-gap: 40px;
   font-size: 16px;
-  @media all and (min-width: 45em) {
-    column-gap: 16px;
-    grid-template-columns: repeat(2, minmax(min(240px, 100%), 1fr));
+  @media all and (min-width: 47em) {
+    --columns-number:2;
+    column-gap: 32px;
+    grid-template-columns: repeat(var(--columns-number), minmax(min(320px, 100%), 1fr));
   }
-  @media all and (min-width: 64em) {
+  @media all and (min-width: 85em) {
+    --columns-number: 3;
     column-gap: 24px;
-    grid-template-columns: repeat(3, minmax(min(340px, 100%), 1fr));
+    
   }
   & .button-background,
   button {
@@ -68,11 +72,11 @@
     height: min-content;
     overflow: hidden;
 
-    @media all and (min-width: 45em) {
+    @media all and (min-width: 47em) {
       grid-column-start: 1;
       grid-column-end: 3;
     }
-    @media all and (min-width: 64em) {
+    @media all and (min-width:85em) {
       grid-column-start: 2;
       grid-column-end: 4;
       padding: 36px;
