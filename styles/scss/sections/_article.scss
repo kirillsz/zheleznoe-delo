@@ -18,13 +18,9 @@
     }
   }
   &-delivery-time {
-    font-size: 24px;
-    @media all and (min-width: 40em) {
-      font-size: 32px;
-    }
-    @media all and (min-width: 64em) {
-      font-size: 40px;
-    }
+    min-width: fit-content;
+    font-size: clamp(24px, 4vw , 40px);
+    
   }
 
   &_about {
@@ -138,10 +134,11 @@
     }
   }
   & .content-wrapper {
-    @media (40em <= width < 64em) {
+    @media (35em <= width < 64em) {
       display: flex;
       align-items: start;
       justify-content: space-between;
+      gap:16px;
       & p {
         max-width: 360px;
       }

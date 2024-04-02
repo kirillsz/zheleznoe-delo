@@ -217,9 +217,7 @@
         justify-content: space-between;
         transform: translateY(2px);
       }
-      @media all and (min-width: 64em) {
-        // transform: translateY(54px);
-      }
+      
     }
     &-mobile-button {
       display: block;
