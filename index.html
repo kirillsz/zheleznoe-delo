@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -6,8 +6,42 @@
     <link rel="stylesheet" href="/styles/scss/style.scss" />
     <title>КРМЗ</title>
   </head>
-  <!-- Yandex.Metrika counter --> 
-  <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(96844440, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/96844440" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] =
+        m[i] ||
+        function () {
+          (m[i].a = m[i].a || []).push(arguments);
+        };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) {
+          return;
+        }
+      }
+      (k = e.createElement(t)),
+        (a = e.getElementsByTagName(t)[0]),
+        (k.async = 1),
+        (k.src = r),
+        a.parentNode.insertBefore(k, a);
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(96844440, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true,
+    });
+  </script>
+  <noscript
+    ><div>
+      <img
+        src="https://mc.yandex.ru/watch/96844440"
+        style="position: absolute; left: -9999px"
+        alt=""
+      /></div
+  ></noscript>
+  <!-- /Yandex.Metrika counter -->
   <body>
     <section class="entry-section section-margin" id="section-entry">
       <section class="entry-section--main">
@@ -521,7 +555,11 @@
               >
                 Позвоним вам и сообщим цену по вашим параметрам
               </p>
-              <form method="POST" action="/amo/amo.php" onsubmit="ym(96844440, 'reachGoal', 'quiz.submit')">
+              <form
+                method="POST"
+                action="/amo/amo.php"
+                onsubmit="ym(96844440, 'reachGoal', 'quiz.submit')"
+              >
                 <div class="form_label-group">
                   <input
                     id="input_tractor-type"
@@ -2528,7 +2566,10 @@
           </button>
           <div>
             <p style="font-size: 20px; margin-bottom: 8px">Или звоните</p>
-            <a href="tel:+79195150777" class="fw-500 text-underline" onclick="ym(96844440, 'reachGoal', 'phone')"
+            <a
+              href="tel:+79195150777"
+              class="fw-500 text-underline"
+              onclick="ym(96844440, 'reachGoal', 'phone')"
               >+7 919 515 07 77</a
             >
           </div>
@@ -2617,7 +2658,10 @@
         <div class="footer--copyright">
           <div class="footer--copyright__main">
             <div class="footer--copyright__main--schedule">
-              <a href="tel:+79195150777" class="text-underline fc-accent fw-500" onclick="ym(96844440, 'reachGoal', 'phone')"
+              <a
+                href="tel:+79195150777"
+                class="text-underline fc-accent fw-500"
+                onclick="ym(96844440, 'reachGoal', 'phone')"
                 >+7 919 515 07 77</a
               ><span class="description-text-xs"
                 >Работаем в выходные и праздники</span
@@ -2659,7 +2703,12 @@
           >+7 919 515 07 77</a
         >
         <p>или укажите номер телефона и мы вам перезвоним</p>
-        <form method="POST" action="/amo/amo.php" style="margin-bottom: 24px" onsubmit="ym(96844440, 'reachGoal', 'zakaz_zvonka')">
+        <form
+          method="POST"
+          action="/amo/amo.php"
+          style="margin-bottom: 24px"
+          onsubmit="ym(96844440, 'reachGoal', 'zakaz_zvonka')"
+        >
           <div class="form_label-group">
             <input
               id="input_action-type"

@@ -8,7 +8,9 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "browserslist": ["defaults"],
+  "browserslist": [
+    "defaults"
+  ],
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "vite": "^5.0.8"

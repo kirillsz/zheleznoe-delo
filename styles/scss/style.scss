@@ -144,7 +144,7 @@ body {
   text-decoration: 2px underline;
   text-underline-offset: 4px;
   /*IOS*/
-  --webkit-text-decoration:underline;
+  --webkit-text-decoration: underline;
   --webkit-text-decoration-thickness: 2px;
   &[data-type="policy"] {
     text-decoration: 1px underline;

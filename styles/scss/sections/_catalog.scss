@@ -7,14 +7,16 @@
   row-gap: 40px;
   font-size: 16px;
   @media all and (min-width: 47em) {
-    --columns-number:2;
+    --columns-number: 2;
     column-gap: 32px;
-    grid-template-columns: repeat(var(--columns-number), minmax(min(320px, 100%), 1fr));
+    grid-template-columns: repeat(
+      var(--columns-number),
+      minmax(min(320px, 100%), 1fr)
+    );
   }
   @media all and (min-width: 85em) {
     --columns-number: 3;
     column-gap: 24px;
-    
   }
   & .button-background,
   button {
@@ -24,7 +26,6 @@
     }
   }
   & button {
-   
     @media all and (min-width: 64em) {
       padding: 8px 24px;
     }
@@ -77,7 +78,7 @@
       grid-column-start: 1;
       grid-column-end: 3;
     }
-    @media all and (min-width:85em) {
+    @media all and (min-width: 85em) {
       grid-column-start: 2;
       grid-column-end: 4;
       padding: 36px;

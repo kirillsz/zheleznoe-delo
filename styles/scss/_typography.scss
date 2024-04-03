@@ -1,7 +1,8 @@
 @use "./colors" as c;
 @font-face {
   font-family: "Brutal";
-  src: url("/fonts/BrutalType-Bold.woff2") format("woff2"),
+  src:
+    url("/fonts/BrutalType-Bold.woff2") format("woff2"),
     url("/fonts/BrutalType-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
@@ -10,7 +11,8 @@
 
 @font-face {
   font-family: "Brutal";
-  src: url("/fonts/BrutalType-Medium.woff2") format("woff2"),
+  src:
+    url("/fonts/BrutalType-Medium.woff2") format("woff2"),
     url("/fonts/BrutalType-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -19,7 +21,8 @@
 
 @font-face {
   font-family: "Brutal";
-  src: url("/fonts/BrutalType.woff2") format("woff2"),
+  src:
+    url("/fonts/BrutalType.woff2") format("woff2"),
     url("/fonts/BrutalType.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;

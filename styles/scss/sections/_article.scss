@@ -19,16 +19,13 @@
   }
   &-delivery-time {
     min-width: fit-content;
-    font-size: clamp(24px, 4vw , 40px);
-    
+    font-size: clamp(24px, 4vw, 40px);
   }
 
   &_about {
     &-heading {
-      font-size: clamp(32px,4.5vw,64px);
+      font-size: clamp(32px, 4.5vw, 64px);
       margin-bottom: 8px;
-
-    
 
       &--xs {
         font-size: 24px;
@@ -132,7 +129,7 @@
       display: flex;
       align-items: start;
       justify-content: space-between;
-      gap:16px;
+      gap: 16px;
       & p {
         max-width: 360px;
       }
@@ -141,7 +138,6 @@
 }
 
 #section {
- 
   &-regions {
     & .flex-column {
       @media all and (min-width: 70em) {

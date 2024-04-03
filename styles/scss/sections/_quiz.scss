@@ -14,7 +14,7 @@
   }
   &__about {
     margin-bottom: 16px;
-    font-size: clamp(24px,3vw,40px);
+    font-size: clamp(24px, 3vw, 40px);
     @media only screen and (min-width: 40em) {
       margin-bottom: 32px;
     }
@@ -74,7 +74,7 @@
     }
     @media only screen and (min-width: 64em) {
       flex-direction: row;
-      gap:32px;
+      gap: 32px;
       justify-content: space-between;
       align-items: baseline;
     }
