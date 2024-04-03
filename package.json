@@ -13,10 +13,10 @@
   ],
   "devDependencies": {
     "autoprefixer": "^10.4.19",
+    "sass": "^1.72.0",
     "vite": "^5.0.8"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.6.0",
-    "sass": "^1.72.0"
+    "@glidejs/glide": "^3.6.0"
   }
 }
