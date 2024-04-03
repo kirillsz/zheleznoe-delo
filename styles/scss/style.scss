@@ -32,7 +32,7 @@ body {
   --max-width: 1325px;
   --padding: 20px;
   width: min(var(--max-width), 100% - (var(--padding) * 2));
-  margin-inline: auto;
+  margin: 0 auto;
   @media only screen and (min-width: 40em) {
     --padding: 32px;
   }
